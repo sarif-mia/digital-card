@@ -1,0 +1,95 @@
+{
+  "company": "Dunamiss",
+  "address": "7207, Bougainvillea St, Block C2, DLF Phase IV, Sector 43, Gurugram, Haryana 122009",
+  "website": "https://dunamiss.in",
+  "logo": "dunamiss-white-logo.png",
+  "logoAlt": "Dunamiss Logo",
+  "actions": [
+    "phone",
+    "email",
+    "map"
+  ],
+  "rows": [
+    {
+      "label": "Phone",
+      "icon": "phone",
+      "lines": [
+        "{{phone}}"
+      ],
+      "href": "tel:{{phone}}",
+      "social": false
+    },
+    {
+      "label": "Email",
+      "icon": "email",
+      "lines": [
+        "{{email}}"
+      ],
+      "href": "mailto:{{email}}",
+      "social": false
+    },
+    {
+      "label": "Dunamiss",
+      "icon": "company-website",
+      "lines": [
+        "www.dunamiss.in"
+      ],
+      "href": "https://dunamiss.in",
+      "social": false
+    },
+    {
+      "label": "Location",
+      "icon": "location",
+      "lines": [
+        "7207, Bougainvillea St, Block C2,",
+        "DLF Phase IV, Sector 43,",
+        "Gurugram, Haryana 122009."
+      ],
+      "social": false
+    },
+    {
+      "label": "Dunamiss",
+      "icon": "briefcase",
+      "lines": [
+        "{{job}}"
+      ],
+      "social": false
+    },
+    {
+      "label": "Facebook",
+      "icon": "facebook",
+      "lines": [
+        "https://facebook.com/profile.php?id=61552254965408"
+      ],
+      "href": "https://facebook.com/profile.php?id=61552254965408",
+      "social": true
+    },
+    {
+      "label": "Instagram",
+      "icon": "instagram",
+      "lines": [
+        "https://www.instagram.com/dunamisscosmetics"
+      ],
+      "href": "https://www.instagram.com/dunamisscosmetics",
+      "social": true
+    },
+    {
+      "label": "Linkedin",
+      "icon": "linkedin",
+      "lines": [
+        "https://www.linkedin.com/company/dunamiss-cosmetics-pvt-ltd"
+      ],
+      "href": "https://www.linkedin.com/company/dunamiss-cosmetics-pvt-ltd",
+      "social": true
+    },
+    {
+      "label": "YouTube",
+      "icon": "youtube",
+      "lines": [
+        "https://www.youtube.com/@dunamisscosmetics"
+      ],
+      "href": "https://www.youtube.com/@dunamisscosmetics",
+      "social": true
+    }
+  ]
+}

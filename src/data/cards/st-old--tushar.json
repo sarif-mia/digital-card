@@ -1,0 +1,83 @@
+{
+  "slug": "st-old/tushar",
+  "brand": "nds9",
+  "name": "MD KHADEMUL ISLAM",
+  "job": "SR. MERCHANDISER",
+  "phone": "+8801673411418",
+  "email": "tushar@nds9.co",
+  "rows": [
+    {
+      "label": "Phone",
+      "icon": "phone",
+      "lines": [
+        "{{phone}}"
+      ],
+      "href": "tel:{{phone}}",
+      "social": false
+    },
+    {
+      "label": "Email",
+      "icon": "email",
+      "lines": [
+        "{{email}}"
+      ],
+      "href": "mailto:{{email}}",
+      "social": false
+    },
+    {
+      "label": "NDS9",
+      "icon": "company-website",
+      "lines": [
+        "nds9.co"
+      ],
+      "href": "https://nds9.co",
+      "social": false
+    },
+    {
+      "label": "Location",
+      "icon": "location",
+      "lines": [
+        "Shanta Forum, East Tower, Level 13,",
+        "187–188/B, Bir Uttam Mir Shawkat Sarak,",
+        "Tejgaon, Dhaka 1208, Bangladesh"
+      ],
+      "social": false
+    },
+    {
+      "label": "Design Studio",
+      "icon": "location",
+      "lines": [
+        "Carrer d'Antoni Alcalá Galiano, 25,",
+        "08940 Cornellà de Llobregat,",
+        "Barcelona, Spain"
+      ],
+      "social": false
+    },
+    {
+      "label": "NDS9",
+      "icon": "briefcase",
+      "lines": [
+        "{{job}}"
+      ],
+      "social": false
+    },
+    {
+      "label": "Website",
+      "icon": "website",
+      "lines": [
+        "https://nds9.co"
+      ],
+      "href": "https://nds9.co",
+      "social": true
+    },
+    {
+      "label": "Linkedin",
+      "icon": "linkedin",
+      "lines": [
+        "https://hk.linkedin.com/company/nds9"
+      ],
+      "href": "https://hk.linkedin.com/company/nds9",
+      "social": true
+    }
+  ]
+}
