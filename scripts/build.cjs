@@ -26,5 +26,5 @@ if (mode === '--check') {
       fs.copyFileSync(path.join(root, logo), path.join(destination, logo));
     }
   }
-  console.log(`${mode === '--generate' ? 'Generated' : 'Built'} ${pages.size} cards in ${path.relative(root, destination) || '.'}.`);
+  console.log(`${mode === '--generate' ? 'Generated' : 'Built'} ${pages.size} pages in ${path.relative(root, destination) || '.'}.`);
 }

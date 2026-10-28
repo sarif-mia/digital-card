@@ -25,7 +25,7 @@ test('contact export has valid structured address fields and CRLF endings', () =
   assert.ok(!card.replace(/\r\n/g, '').includes('\n'));
 });
 
-const pages = [...fs.readdirSync(root).filter(f => f.endsWith('.html')), ...fs.readdirSync(path.join(root, 'st-old')).filter(f => f.endsWith('.html')).map(f => `st-old/${f}`)];
+const pages = require('../scripts/site.cjs').loadSite().cards.map(card => `${card.slug}.html`);
 for (const page of pages) {
   test(`${page}: shared assets, accessible controls, unique IDs and complete contact`, () => {
     const html = fs.readFileSync(path.join(root, page), 'utf8');

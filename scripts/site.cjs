@@ -83,6 +83,13 @@ function loadSite() {
     if (pages.has(`${card.slug}.html`)) throw new Error(`Duplicate slug: ${card.slug}`);
     pages.set(`${card.slug}.html`, renderCard(card, brands[card.brand], template, icons));
   }
+  const directoryCards = cards.filter(card => !card.slug.startsWith('st-old/') && card.slug !== 'test')
+    .sort((a, b) => a.name.trim().localeCompare(b.name.trim(), 'en'));
+  const directoryLinks = directoryCards.map(card => {
+    const brand = brands[card.brand];
+    return `      <a class="info-item directory-link" href="/${escapeHtml(card.slug)}">\n        <div class="info-text">\n          <strong>${escapeHtml(card.displayName || card.name)}</strong>\n          <small>${escapeHtml(card.displayJob || card.job)} · ${escapeHtml(card.company || brand.company)}</small>\n        </div>\n        <span aria-hidden="true">&#8594;</span>\n      </a>`;
+  }).join('\n');
+  pages.set('index.html', interpolate(read('src/templates/directory.html'), { cards: directoryLinks }));
   return { cards, brands, pages };
 }
 

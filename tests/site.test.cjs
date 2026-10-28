@@ -7,11 +7,22 @@ const { root, loadSite, validateCard, escapeHtml, interpolate, renderCard } = re
 test('every source card produces its checked-in page without unresolved placeholders', () => {
   const { cards, pages } = loadSite();
   assert.ok(cards.length > 0);
-  assert.equal(cards.length, pages.size);
+  assert.equal(cards.length + 1, pages.size);
   for (const [file, html] of pages) {
     assert.equal(fs.readFileSync(path.join(root, file), 'utf8'), html, file);
     assert.ok(!/\{\{\w+\}\}/.test(html), file);
   }
+});
+
+test('homepage links to every current card with clean URLs', () => {
+  const { cards, pages } = loadSite();
+  const home = pages.get('index.html');
+  assert.ok(home.includes('<title>Digital Cards</title>'));
+  assert.ok(home.includes('aria-label="Team digital cards"'));
+  const links = [...home.matchAll(/class="info-item directory-link" href="([^"]+)"/g)].map(match => match[1]);
+  const expected = cards.filter(card => !card.slug.startsWith('st-old/') && card.slug !== 'test').map(card => `/${card.slug}`).sort();
+  assert.deepEqual(links.sort(), expected);
+  assert.ok(!links.some(link => link.endsWith('.html')));
 });
 
 test('validation rejects unsafe paths, unknown brands and malformed contacts', () => {

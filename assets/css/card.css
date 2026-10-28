@@ -135,6 +135,21 @@ body {
   color: #000;
 }
 
+.directory .header {
+  padding-bottom: 32px;
+}
+
+.directory-link {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.directory-link strong {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
 .map-btn {
   margin-top: 10px;
   display: inline-block;

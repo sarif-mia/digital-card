@@ -71,7 +71,7 @@ Open a generated page directly, or serve `dist/` with a static HTTP server. For 
 python3 -m http.server 8000 --directory dist
 ```
 
-Visit `http://localhost:8000/shabuz.html` or `/akshay.html`. There is no default `index.html`.
+Visit `http://localhost:8000/` for the card directory, or `/shabuz.html` and `/akshay.html` for individual cards. The homepage lists current cards alphabetically; the test and legacy cards remain accessible at their own URLs but are omitted from the directory. Homepage links use clean production URLs; basic static servers may require adding `.html` manually.
 
 Checks cover invalid contacts and slugs, missing assets, duplicate SVG IDs, stale generated pages, escaped output, and vCard Unicode, line folding, and delimiter handling.
 
